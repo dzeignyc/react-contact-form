@@ -23,7 +23,7 @@ export default class Contact extends Component {
       message: this.state.message
     };
 
-    axios.post('/api/contact/', data, { timeout: 5000 })
+    axios.post('/api/contact/', data, { timeout: 10000 })
     .then(res => {
       console.log('The Message Was Sent!!');
       this.setState({
