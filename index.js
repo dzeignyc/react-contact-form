@@ -24,6 +24,7 @@ app.post('/api/contact', (req, res) => {
       pass: process.env.PASSWORD
     }
   });
+  
   let mailOptions = {
     from: data.email,
     to: process.env.SENDTO,
