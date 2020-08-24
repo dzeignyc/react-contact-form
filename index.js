@@ -6,8 +6,8 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get('/', (req, res) => {
@@ -22,9 +22,9 @@ app.post('/api/contact', (req, res) => {
     auth: {
       user: process.env.USERNAME,
       pass: process.env.PASSWORD
-    }
+    },
   });
-  
+
   let mailOptions = {
     from: data.email,
     to: process.env.SENDTO,
