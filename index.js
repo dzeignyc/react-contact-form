@@ -22,7 +22,7 @@ app.post('/api/contact', (req, res) => {
     auth: {
       user: process.env.USERNAME,
       pass: process.env.PASSWORD
-    },
+    }
   });
 
   let mailOptions = {
@@ -41,13 +41,14 @@ app.post('/api/contact', (req, res) => {
     `
   };
 
-  smtpTransport.sendMail(mailOptions, (err, res) => {
+  smtpTransport.sendMail(mailOptions, (err, response) => {
     if(err) {
-      console.log(err);
+      response.send(err);
     } else {
-      console.log('Message sent!');
+      response.send('Message sent!');
     }
     smtpTransport.close();
+    return res.send(err ? err : 'Message sent!');
   });
 });
 
