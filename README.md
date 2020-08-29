@@ -1,5 +1,5 @@
 # react-contact-form
-A ReactJs contact form built with Create-React-App NodeJs/Express and the Gmail SMTP
+A ReactJs contact form built with Create-React-App, NodeJs/Express, and the Gmail SMTP
 
 In the project directory, you can run:
 ### `yarn run dev`
