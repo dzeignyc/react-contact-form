@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #fafafa;
+}
+
+form#contact {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  left: 0;
+  width: 320px;
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -160px;
+}
+
+form#contact input {
+  margin: 7px 0;
+}
+
+div.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border: none;
+  background-color: #037AFB;
+  color: white;
+  margin: 7px 0;
+  padding: 7px;
+  border-radius: 4px;
+}
