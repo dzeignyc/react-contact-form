@@ -43,9 +43,9 @@ app.post('/api/contact', (req, res) => {
 
   smtpTransport.sendMail(mailOptions, (err, response) => {
     if(err) {
-      response.send(err);
+      console.log(err);
     } else {
-      response.send('Message sent!');
+      console.log('Message sent!');
     }
     smtpTransport.close();
     return res.send(err ? err : 'Message sent!');
